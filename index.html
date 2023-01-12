@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.108.0">
+    <title>Postulate ERP</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
+
+
+
+
+
+    <link href="./static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./static/css/custom.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="./static/css/dashboard.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Postulate ERP </a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="form-control form-control-dark w-100 rounded-0 border-0">Обменник Москва Федерация [id 777-1]</div>
+<!--    <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search">-->
+    <div class="navbar-nav">
+        <div class="nav-item text-nowrap">
+            <a class="nav-link px-3" href="#">Выйти</a>
+        </div>
+    </div>
+</header>
+
+<div class="container-fluid">
+    <div class="row">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+            <div class="position-sticky pt-3 sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <span data-feather="home" class="align-text-bottom"></span>
+                            Главная
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="dollar-sign" class="align-text-bottom"></span>
+                            Баланс
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="users" class="align-text-bottom"></span>
+                            Обменники
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="target" class="align-text-bottom"></span>
+                            Заявки [+2]
+                        </a>
+                    </li>
+                </ul>
+
+<!--                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">-->
+<!--                    <span>Быстрый доступ</span>-->
+<!--                </h6>-->
+<!--                <ul class="nav flex-column mb-2">-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#">-->
+<!--                            <span data-feather="file-text" class="align-text-bottom"></span>-->
+<!--                            Покупка-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#">-->
+<!--                            <span data-feather="file-text" class="align-text-bottom"></span>-->
+<!--                            Отправить-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#">-->
+<!--                            <span data-feather="file-text" class="align-text-bottom"></span>-->
+<!--                            Social engagement-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#">-->
+<!--                            <span data-feather="file-text" class="align-text-bottom"></span>-->
+<!--                            Year-end sale-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+            </div>
+        </nav>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="row align-items-md-stretch mb-3 mt-1">
+                <div class="mb-0 p-1 border-top rounded-top-3 dropup">
+                    <h5 class="text-center">Баланс <small class="text-muted">≈</small> 10 580<small class="text-muted">.21 USDT</small></h5>
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Валюта</th>
+                            <th>Сумма</th>
+                            <th>Подробнее</th>
+                            <th>Средний курс</th>
+                            <th>Курс (2%)</th>
+                            <th>Мин. стоимость</th>
+                            <th>Действие</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>USDT</td>
+                            <td>4 096<small class="text-muted">.5</small></td>
+                            <td>4 096<small class="text-muted">.5 </small>USDT</td>
+                            <td><small class="text-muted">USDT BUY</small><br> 71<small class="text-muted">.48 </small>RUB</td>
+                            <td><small class="text-muted">min USDT SELL</small><br> 72<small class="text-muted">.91 </small>RUB</td>
+                            <td>-</td>
+                            <td><a href="#">Продать</a></td>
+                            <td><a href="#">Отправить</a></td>
+                            <td><a href="#">История сделок</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>RUB</td>
+                            <td>343 010<small class="text-muted">.0</small></td>
+                            <td>
+                                <table class="child-table">
+                                    <tr>
+                                        <td>269 810<small class="text-muted">.0 </small>RUB <small class="text-muted">≈ 3 769<small>.87 </small>USDT</small></td>
+                                        <td>кэш</td>
+                                    </tr>
+                                    <tr>
+                                        <td>73 200<small class="text-muted">.0 </small>RUB <small class="text-muted">≈ 1 022<small>.77 </small>USDT</small></td>
+                                        <td>тинек</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td><small class="text-muted">USDT SELL</small><br> 73<small class="text-muted">.03 </small>RUB</td>
+                            <td><small class="text-muted">max USDT BUY</small><br> 71<small class="text-muted">.57 </small>RUB</td>
+                            <td>4 792<small class="text-muted">.65 </small>USDT</td>
+                            <td><a href="#">Продать</a></td>
+                            <td><a href="#">Отправить</a></td>
+                            <td><a href="#">История сделок</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>AED</td>
+                            <td>5 812<small class="text-muted">.5</small></td>
+                            <td>
+                                <table class="child-table">
+                                    <tr>
+                                        <td>5 812<small class="text-muted">.5 </small>AED <small class="text-muted">≈ 1 538<small>.91 </small>USDT</small></td>
+                                        <td>кэш</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td><small class="text-muted">USDT SELL</small><br> 3<small class="text-muted">.854 </small>AED</td>
+                            <td><small class="text-muted">max USDT BUY</small><br> 3<small class="text-muted">.777 </small>AED</td>
+                            <td>1 538<small class="text-muted">.91 </small>USDT</td>
+                            <td><a href="#">Продать</a></td>
+                            <td><a href="#">Отправить</a></td>
+                            <td><a href="#">История сделок</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>TRY</td>
+                            <td>2 970<small class="text-muted">.0</small></td>
+                            <td>
+                                <table class="child-table">
+                                    <tr>
+                                        <td>2 970<small class="text-muted">.0 </small>TRY <small class="text-muted">≈ 152<small>.15 </small>USDT</small></td>
+                                        <td>кэш</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td><small class="text-muted">USDT SELL</small><br> 19<small class="text-muted">.92 </small>TRY</td>
+                            <td><small class="text-muted">max USDT BUY</small><br> 19<small class="text-muted">.52 </small>TRY</td>
+                            <td>152<small class="text-muted">.15 </small>USDT</td>
+                            <td><a href="#">Продать</a></td>
+                            <td><a href="#">Отправить</a></td>
+                            <td><a href="#">История сделок</a></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="row align-items-md-stretch mb-3 mt-1">
+                <div class="d-flex justify-content-c flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <span class="h4">Сделки 10/01/23</span>
+                </div>
+
+                <div class="mb-0 border rounded-top-3 col-3 dropup text-center">
+                    <button class="btn col-12 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+                        <span class="h6">СДЕЛОК: 10<small class="text-muted"> шт</small></span>
+                    </button>
+                    <ul class="dropdown-menu p-2 w-100" aria-labelledby="dropdownMenuButton1">
+                        <li class="h6"><small class="text-muted">СДЕЛКИ (продажа)</small></li>
+                        <li>USDT: 7<small class="text-muted"> шт</small></li>
+                        <li>AED[кэш]: 2<small class="text-muted"> шт</small></li>
+                        <li>TRY[кэш]: 1<small class="text-muted"> шт</small></li>
+                        <li class="mt-2 border-top">ВСЕГО: 10<small class="text-muted"> шт</small></li>
+                    </ul>
+                </div>
+
+                <div class="mb-0 border rounded-top-3 col-3 dropup text-center" >
+                    <button class="btn col-12 dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown">
+                        <span class="h6">СПРЕД: ≈ 2<small class="text-muted">.65 %</small></span>
+                    </button>
+                    <ul class="dropdown-menu p-2 w-100" aria-labelledby="dropdownMenuButton2">
+                        <li class="h6"><small class="text-muted">СПРЕД</small></li>
+                        <li>min: 1<small class="text-muted">.3 %</small></li>
+                        <li>max: 4<small class="text-muted">.2 %</small></li>
+                        <li class="mt-2 border-top">СРЕДНИЙ: 2<small class="text-muted">.65 %</small></li>
+                    </ul>
+                </div>
+
+                <div class="mb-0 border rounded-top-3 col-3 dropup text-center">
+                    <button class="btn col-12 dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown">
+                        <span class="h6">ОБЪЕМ ПРОДАЖ: ≈ 12 733<small class="text-muted">.6 </small>USDT</span>
+                    </button>
+                    <ul class="dropdown-menu p-2 w-100" aria-labelledby="dropdownMenuButton3">
+                        <li class="h6"><small class="text-muted">ОБЪЕМ ПРОДАЖ</small></li>
+                        <li>8 800<small class="text-muted">.0 </small>USDT</li>
+                        <li>6 150<small class="text-muted">.0 </small>AED <small class="text-muted">≈ 1 628<small>.28 </small>USDT</small></li>
+                        <li>45 000<small class="text-muted">.0 </small>TRY <small class="text-muted">≈ 2 305<small>.32 </small>USDT</small></li>
+                        <li class="mt-2 border-top">ИТОГО: ≈ 12 733<small class="text-muted">.6 </small>USDT</li>
+                    </ul>
+                </div>
+
+                <div class="mb-0 border rounded-top-3 col-3 dropup text-center">
+                    <button class="btn col-12 dropdown-toggle" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown">
+                        <span class="h6">ДОХОД: ≈ 337<small class="text-muted">.44 </small>USDT</span>
+                    </button>
+                    <ul class="dropdown-menu p-2 w-100" aria-labelledby="dropdownMenuButton4">
+                        <li class="h6"><small class="text-muted">ДОХОД</small></li>
+                        <li>Минимальный <small class="text-muted">(2<small>.0 </small>%)</small>: ≈ 254<small class="text-muted">.67 </small>USDT</li>
+                        <li>Текущий: ≈ 348<small class="text-muted">.13 </small>USDT</li>
+                        <li class="mt-2 border-top">Прогнозируемый <small class="text-muted">(2<small>.65 </small>%)</small>: ≈ 337<small class="text-muted">.44 </small>USDT</li>
+                    </ul>
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Время</th>
+                            <th>Направление</th>
+                            <th>Продано</th>
+                            <th>Получено</th>
+                            <th>Курс биржи</th>
+                            <th>Курс продажи</th>
+                            <th>Спред</th>
+                            <th>Доход</th>
+                            <th>Доход USDT</th>
+                            <th>Комментарий</th>
+                            <th>Изменение баланса</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>471</td>
+                            <td>16:56</td>
+                            <td>USDT→AED[кэш]</td>
+                            <td>1 500<small class="text-muted">.0</small></td>
+                            <td>5 812<small class="text-muted">.5</small></td>
+                            <td>3<small class="text-muted">.759</small></td>
+                            <td>3<small class="text-muted">.875</small></td>
+                            <td>3<small class="text-muted">.0%</small></td>
+                            <td>174<small class="text-muted">.38 </small>AED</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>
+                                <small class="text-muted">5 596<small>.0</small></small> → 4 096<small class="text-muted">.5 </small>USDT<br>
+                                <small class="text-muted">0<small>.0</small></small> → 5 812<small class="text-muted">.5 </small>AED<br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>470</td>
+                            <td>16:38</td>
+                            <td>USDT→RUB[кэш]</td>
+                            <td>1 500<small class="text-muted">.0</small></td>
+                            <td>109 650<small class="text-muted">.0</small></td>
+                            <td>71<small class="text-muted">.1</small></td>
+                            <td>73<small class="text-muted">.1</small></td>
+                            <td>2<small class="text-muted">.8%</small></td>
+                            <td>3 070<small class="text-muted">.2 </small>RUB</td>
+                            <td>≈ 43<small class="text-muted">.91 </small>USDT</td>
+                            <td>-</td>
+                            <td>
+                                <small class="text-muted">7 096<small>.5</small></small> → 5 596<small class="text-muted">.5 </small>USDT<br>
+                                <small class="text-muted">233 360<small>.0</small></small> → 343 010<small class="text-muted">.0 </small>RUB<br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>469</td>
+                            <td>16:14</td>
+                            <td>USDT→RUB[кэш]</td>
+                            <td>2 200<small class="text-muted">.0</small></td>
+                            <td>160 160<small class="text-muted">.0</small></td>
+                            <td>71<small class="text-muted">.2</small></td>
+                            <td>72<small class="text-muted">.8</small></td>
+                            <td>2<small class="text-muted">.2%</small></td>
+                            <td>3 523<small class="text-muted">.52 </small>RUB</td>
+                            <td>≈ 50<small class="text-muted">.39 </small>USDT</td>
+                            <td>-</td>
+                            <td>
+                                <small class="text-muted">9 296<small>.5</small></small> → 7 096<small class="text-muted">.5 </small>USDT<br>
+                                <small class="text-muted">73 200<small>.0</small><small>.0</small></small> → 233 360<small class="text-muted">.0 </small>RUB<br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>468</td>
+                            <td>15:59</td>
+                            <td>AED[кэш]→USDT</td>
+                            <td>1 650<small class="text-muted">.0</small></td>
+                            <td>462<small class="text-muted">.0</small></td>
+                            <td>0<small class="text-muted">.272</small></td>
+                            <td>0<small class="text-muted">.28</small></td>
+                            <td>2<small class="text-muted">.9%</small></td>
+                            <td>13<small class="text-muted">.4 </small>USDT</td>
+                            <td>13<small class="text-muted">.4 </small>USDT</td>
+                            <td>-</td>
+                            <td>
+                                <small class="text-muted">1 650<small>.0</small></small> → 0<small class="text-muted">.0 </small>AED<br>
+                                <small class="text-muted">8 834<small>.5</small></small> → 9 296<small class="text-muted">.5 </small>USDT<br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>467</td>
+                            <td>15:48</td>
+                            <td>TRY[кэш]→USDT</td>
+                            <td>45 000<small class="text-muted">.0</small></td>
+                            <td>2 434<small class="text-muted">.5</small></td>
+                            <td>0<small class="text-muted">.053</small></td>
+                            <td>0<small class="text-muted">.0541</small></td>
+                            <td>2<small class="text-muted">.1%</small></td>
+                            <td>51<small class="text-muted">.12 </small>USDT</td>
+                            <td>51<small class="text-muted">.12 </small>USDT</td>
+                            <td>-</td>
+                            <td>
+                                <small class="text-muted">47 970<small>.0</small></small> → 2 970<small class="text-muted">.0 </small>TRY<br>
+                                <small class="text-muted">6 400<small>.0</small></small> → 8 834<small class="text-muted">.5 </small>USDT<br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>466</td>
+                            <td>15:13</td>
+                            <td>USDT→TRY[кэш]</td>
+                            <td>1 000<small class="text-muted">.0</small></td>
+                            <td>19 300<small class="text-muted">.0</small></td>
+                            <td>18<small class="text-muted">.9</small></td>
+                            <td>19<small class="text-muted">.3</small></td>
+                            <td>2<small class="text-muted">.1%</small></td>
+                            <td>405<small class="text-muted">.3 </small>TRY</td>
+                            <td>≈ 21<small class="text-muted">.72 </small>USDT</td>
+                            <td>-</td>
+                            <td>
+                                <small class="text-muted">7 400<small>.0</small></small> → 6 400<small class="text-muted">.0 </small>USDT<br>
+                                <small class="text-muted">23 985<small>.0</small></small> → 47 970<small class="text-muted">.0 </small>TRY<br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>465</td>
+                            <td>14:57</td>
+                            <td>AED[кэш]→TRY[кэш]</td>
+                            <td>4 500<small class="text-muted">.0</small></td>
+                            <td>23 985<small class="text-muted">.0</small></td>
+                            <td>5<small class="text-muted">.11</small></td>
+                            <td>5<small class="text-muted">.33</small></td>
+                            <td>4<small class="text-muted">.2%</small></td>
+                            <td>1 007<small class="text-muted">.37 </small>TRY</td>
+                            <td>≈ 54<small class="text-muted">.0 </small>USDT</td>
+                            <td>-</td>
+                            <td>
+                                <small class="text-muted">6 150<small>.0</small></small> → 1 650<small class="text-muted">.0 </small>AED<br>
+                                <small class="text-muted">0<small>.0</small></small> → 23 985<small class="text-muted">.0 </small>TRY<br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>464</td>
+                            <td>14:35</td>
+                            <td>USDT→RUB[тинек]</td>
+                            <td>1 000<small class="text-muted">.0</small></td>
+                            <td>73 200<small class="text-muted">.0</small></td>
+                            <td>71<small class="text-muted">.1</small></td>
+                            <td>73<small class="text-muted">.2</small></td>
+                            <td>2<small class="text-muted">.9%</small></td>
+                            <td>2 122<small class="text-muted">.8 </small>RUB</td>
+                            <td>≈ 30<small class="text-muted">.36 </small>USDT</td>
+                            <td>-</td>
+                            <td>
+                                <small class="text-muted">8 400<small>.0</small></small> → 7 400<small class="text-muted">.0 </small>USDT<br>
+                                <small class="text-muted">0<small>.0</small></small> → 73 200<small class="text-muted">.0 </small>RUB<br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>463</td>
+                            <td>14:09</td>
+                            <td>USDT→AED[кэш]</td>
+                            <td>800<small class="text-muted">.0</small></td>
+                            <td>3 100<small class="text-muted">.0</small></td>
+                            <td>3<small class="text-muted">.759</small></td>
+                            <td>3<small class="text-muted">.875</small></td>
+                            <td>3<small class="text-muted">.0%</small></td>
+                            <td>93<small class="text-muted">.0 </small>AED</td>
+                            <td>≈ 25<small class="text-muted">.32 </small>USDT</td>
+                            <td>-</td>
+                            <td>
+                                <small class="text-muted">9 200<small>.0</small></small> → 8 400<small class="text-muted">.0 </small>USDT<br>
+                                <small class="text-muted">3 050<small>.0</small></small> → 6 150<small class="text-muted">.0 </small>AED<br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>462</td>
+                            <td>13:51</td>
+                            <td>USDT→AED[кэш]</td>
+                            <td>800<small class="text-muted">.0</small></td>
+                            <td>3 050<small class="text-muted">.0</small></td>
+                            <td>3<small class="text-muted">.763</small></td>
+                            <td>3<small class="text-muted">.8125</small></td>
+                            <td>1<small class="text-muted">.3%</small></td>
+                            <td>39<small class="text-muted">.65 AED</small></td>
+                            <td>≈ 10<small class="text-muted">.4 USDT</small></td>
+                            <td>-</td>
+                            <td>
+                                <small class="text-muted">10 000<small>.0</small></small> → 9 200<small class="text-muted">.0 USDT</small><br>
+                                <small class="text-muted">0<small>.0</small></small> → 3 050<small class="text-muted">.0 AED</small><br>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+<!--            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">-->
+<!--                <h1 class="h2">Покупка USDT</h1>-->
+<!--            </div>-->
+<!--            <table class="table">-->
+<!--                <thead>-->
+<!--                    <tr>-->
+<!--                        <th>ID</th>-->
+<!--                        <th>Дата-Время</th>-->
+<!--                        <th>Актив</th>-->
+<!--                        <th>Объем</th>-->
+<!--                        <th>Цена актива</th>-->
+<!--                        <th>Сумма</th>-->
+<!--                        <th>Комментарий</th>-->
+<!--                    </tr>-->
+<!--                </thead>-->
+<!--                <tbody>-->
+<!--                    <tr>-->
+<!--                        <td>462</td>-->
+<!--                        <td>07/01/23 13:51</td>-->
+<!--                        <td>USDT</td>-->
+<!--                        <td>50 000</td>-->
+<!--                        <td>71.67 RUB</td>-->
+<!--                        <td>3 583 500 RUB</td>-->
+<!--                        <td>Покупка через Huobi</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td colspan="7" class="text-center">Показать данные за 06/01/22</td>-->
+<!--                    </tr>-->
+<!--                </tbody>-->
+<!--            </table>-->
+        </main>
+    </div>
+</div>
+
+
+<script src="./static/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous">
+</script>
+
+<script src="./static/js/dashboard.js">
+</script>
+
+</body>
+</html>

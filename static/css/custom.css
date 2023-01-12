@@ -1,0 +1,62 @@
+.dropup{
+    background-color: #FAFAFA
+}
+
+.btn {
+    border: none;
+}
+
+.dropup:hover{
+    background-color: #F2F2F2
+}
+
+.dropdown-menu{
+    background-color: #FAFAFA
+}
+
+.table {
+    width: 100%;
+    border: none;
+}
+
+.child-table{
+    margin: auto;
+    border: none;
+}
+
+.table thead th {
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    padding: 10px 15px;
+    background: #D4D8FF;
+    font-size: 14px;
+}
+.table tbody td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 3px 5px;
+    font-size: 14px;
+}
+
+.table tbody td a{
+    text-decoration: none;
+}
+
+.table tbody tr {
+    background: #ffffff;
+}
+
+.table tbody tr:hover {
+    background-color: #F2F2F2
+}
+
+.table tbody tr{
+    border-bottom: 1px solid #ddd;
+}
+
+
+.child-table tbody tr:last-child{
+    border: none;
+}
